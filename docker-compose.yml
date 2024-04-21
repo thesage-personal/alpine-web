@@ -4,11 +4,11 @@ services:
     build:
       context: .
       args:
-        ALPINE_VERSION: "3.19"
-        NOVNC_VERSION: "v1.4.0"
-        WEBSOCKIFY_VERSION: "v0.11.0"
-        IMAGE_TAG: "latest"
-        BUILD_DATE: "01.01.1970"
+        ALPINE_VERSION: "${ALPINE_VERSION:-3.19}"
+        NOVNC_VERSION: "${NOVNC_VERSION:-v1.4.0}"
+        WEBSOCKIFY_VERSION: "${WEBSOCKIFY_VERSION:-v0.11.0}"
+        IMAGE_TAG: "${IMAGE_TAG:-latest}"
+        BUILD_DATE: "${BUILD_DATE:-01.01.1970}"
     ports:
       - '${PUBLIC_HTTP_PORT:-6080:6080}'
     restart: always

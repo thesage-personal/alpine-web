@@ -52,6 +52,16 @@ You can set environmental values in `.env` file
 
 ### Environment
 
+#### Build arguments
+
+- `ALPINE_VERSION` - alpine linux docker image tag
+- `NOVNC_VERSION` - version of noVNC. [Releases page](https://github.com/novnc/noVNC/releases)
+- `WEBSOCKIFY_VERSION` - Version of Websockify. [Releases page](https://github.com/novnc/websockify/releases)
+- `IMAGE_TAG` - name of building image tag
+- `BUILD_DATE` - date of building image
+
+#### Runtime environmental variables
+
 - `ALPINE_PASSWORD` - change password for user `alpine`
 - `PUBLIC_HTTP_PORT` - set port for access to novnc.
   `16080:6080` would publish novnc on `16080` port.

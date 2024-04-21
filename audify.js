@@ -21,14 +21,14 @@ rtAudio.outputVolume = 0
 
 // Open the input/output stream
 rtAudio.openStream({
-        deviceId: rtAudio.getDefaultOutputDevice(), // Output device id (Get all devices using `getDevices`)
-        nChannels: 2, // Number of channels
-        firstChannel: 0 // First channel index on device (default = 0).
-    }, {
-        deviceId: rtAudio.getDefaultInputDevice(), // Input device id (Get all devices using `getDevices`)
-        nChannels: 2, // Number of channels
-        firstChannel: 0 // First channel index on device (default = 0).
-    },
+    deviceId: rtAudio.getDefaultOutputDevice(), // Output device id (Get all devices using `getDevices`)
+    nChannels: 2, // Number of channels
+    firstChannel: 0 // First channel index on device (default = 0).
+}, {
+    deviceId: rtAudio.getDefaultInputDevice(), // Input device id (Get all devices using `getDevices`)
+    nChannels: 2, // Number of channels
+    firstChannel: 0 // First channel index on device (default = 0).
+},
     RtAudioFormat.RTAUDIO_SINT16, // PCM Format - Signed 16-bit integer
     48000, // Sampling rate is 44.1kHz
     480, // Frame size is 1920 (40ms)

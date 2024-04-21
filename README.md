@@ -29,23 +29,42 @@ v0.1.0 initial code
 
 ## Build Image
 
+### Build using plain Docker
+
 ```shell
 git clone https://github.com/novaspirit/Alpine_xfce4_noVNC.git
 docker build -t alpine-xfce4 Alpine_xfce4_noVNC/
 ```
 
+### Build using Docker Compose
+
+```shell
+git clone https://github.com/novaspirit/Alpine_xfce4_noVNC.git
+cd Alpine_xfce4_noVNC
+docker-compose build
+```
+
+Image builds automatically, when [starting compose](#run-using-docker-compose).
+You can skip this step.
+
 ## Run Image
 
-### Using plain Docker
+### Run using plain Docker
 
 ```shell
 docker run -it -p 6080:6080 -p 56780:56780 --name alpine-novnc alpine-xfce4
 ```
 
-### Using Docker Compose
+### Run using Docker Compose
 
 ```shell
 docker-compose up -d
+```
+
+If you want to force rebuild
+
+```shell
+docker-compose up -d --build --no-cache
 ```
 
 You can set environmental values in `.env` file
